@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0rem;
+    position: relative;
+}
+
+.image {
+    max-width: 400px;
+    max-height: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 4rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+.result-container {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.result-label {
+    font-weight: bold;
+    color: #6c757d;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+
+.result-value {
+    font-weight: bold;
+    color: #0B0D17;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 34px;
+}
+
+.footer {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: auto;
+}
+
+.made-by-label {
+    font-weight: bold;
+}
+
+.made-by-value {
+    font-weight: bold;
+}
