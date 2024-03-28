@@ -12,7 +12,7 @@
         <h2 class="subtitle" style="color: white;">Detect pneumonia using this machine learning model</h2>
     </header>
     <div class="container">
-        <image class="image"  src="{{ url_for('static', filename='pneumonia.jpeg')}}">
+        <image class="image" id="image"  src="{{ url_for('static', filename='uploads/' + filename)}}"></image>
 
         <form action="/upload" method="POST" enctype="multipart/form-data">
             <input type="file" id="uploadFile" name="uploadFile" accept=".jpg .png .jpeg">
@@ -23,7 +23,7 @@
                  
         <div class="result-container">
             <div class="result-label">Result:</div>
-            <div class="result-value">Pneumonia</div>   
+            <div class="result-value">{{result}}</div>   
         </div>
     </div>
     <footer class="footer" style="background-color: #0B0D17;">
