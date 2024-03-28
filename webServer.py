@@ -1,5 +1,8 @@
 from flask import Flask,render_template,request
 from werkzeug.utils import secure_filename
+from model import prediction
+from test import test
+
 import os
 
 app = Flask("webServer")
@@ -14,6 +17,11 @@ def allowed_file(file):
         return True
     else:
         return False
+
+@app.route("/test")
+def test_page():
+    print(prediction("normal.jpeg"))
+    return render_template('test.html')
 
 @app.route('/upload',methods=["POST"])
 def upload():
